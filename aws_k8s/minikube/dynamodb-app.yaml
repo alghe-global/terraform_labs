@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynamodb-app
+  labels:
+    app: dynamodb-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynamodb-app
+  template:
+    metadata:
+      labels:
+        app: dynamodb-app
+    spec:
+      containers:
+      - name: dynamodb-app
+        image: algheglobal/aws_k8s:1.0
+        ports:
+        - containerPort: 5000
+        env:
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: aws_access_key_id
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: aws_secret_access_key
+        - name: AWS_REGION
+          value: us-east-1
+        - name: AWS_DYNAMODB_TABLE
+          value: hello
+        - name: AWS_DYNAMODB_KEY
+          value: message
+        - name: AWS_DYNAMODB_VALUE
+          value: Hello, world!
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dynamodb-app-service
+spec:
+  selector:
+    app: dynamodb-app
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+      nodePort: 30000

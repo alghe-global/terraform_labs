@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" version="27.0.9">
+  <diagram name="Page-1" id="YO6fI4UiuW-zHiKsXfEC">
+    <mxGraphModel dx="701" dy="815" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-10" value="eu-west-1" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="103.5" y="95" width="222.5" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-7" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.5;exitY=0.95;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="aBk0e4fkvTpgOlKFJHKp-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="262" y="179.89999999999998" as="sourcePoint" />
+            <mxPoint x="143" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="49" y="137" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-3" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="aBk0e4fkvTpgOlKFJHKp-1" target="up7cTZ_8u8NtMhONYyh3-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="67" y="289" as="sourcePoint" />
+            <mxPoint x="132" y="156.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-4" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1" target="R3kzgWhnijGcorkh3ly7-1" source="up7cTZ_8u8NtMhONYyh3-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="169" y="147" as="sourcePoint" />
+            <mxPoint x="240" y="146.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-6" value="DynamoDB" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.dynamo_db;fillColor=#2E73B8;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="243.5" y="256" width="37" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-8" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;K8s lab&lt;br&gt;&lt;/h1&gt;&lt;p&gt;1. Client connects to Internet Gateway&lt;br&gt;&lt;/p&gt;&lt;p&gt;2. ELB connects to Docker container exposed on localhost + port&lt;br&gt;&lt;/p&gt;&lt;p&gt;3. Kubernetes container serves the request (HTTP/80, 200)&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 3.1. By querying DynamoDB for a record&lt;/p&gt;&lt;p&gt;4. All this done between regions and set up with Terraform&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="372" y="103" width="411" height="187" as="geometry" />
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-9" value="us-east-1" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=1;rotation=-90;" parent="1" vertex="1">
+          <mxGeometry x="197" y="222" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="R3kzgWhnijGcorkh3ly7-1" value="docker" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="239.75" y="131.5" width="44.5" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="up7cTZ_8u8NtMhONYyh3-1" value="IGW" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.internet_gateway;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="92" y="134.5" width="47" height="46" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

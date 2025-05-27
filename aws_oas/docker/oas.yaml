@@ -1,0 +1,79 @@
+openapi: 3.0.4
+info:
+  title: AWS OAS API
+  description: |-
+    This is a simple OAS for Terraform AWS OAS project. See https://github.com/alghe-global/terraform_labs for more information.
+  license:
+    name: Apache 2.0
+    url: https://github.com/alghe-global/terraform_labs/blob/master/LICENSE
+  version: 1.0.0
+
+paths:
+  /entries:
+    get:
+      description: Fetch all entries stored in the database
+      responses:
+        200:
+          description: Successful pull of entries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Entry'
+        404:
+          description: Empty table or table not found.
+
+    post:
+      description: Put an entry into the database
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/Entry'
+      responses:
+        200:
+          description: Successfully created an entry in the database
+        500:
+          description: Internal Server Error occurred while trying to write entry to the database.
+
+  /entry/{key}:
+    get:
+      description: Fetch a specific entry from the database
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+            example: message
+        - name: value
+          in: query
+          required: true
+          schema:
+            type: string
+            example: Hello, world!
+      responses:
+        200:
+          description: Successful pull of entry
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/Entry'
+        404:
+          description: Entry not found
+
+components:
+  schemas:
+    Entry:
+      description: Entry in the database composed of key-value
+      properties:
+        key:
+          type: string
+          example: message
+        value:
+          type: string
+          example: Hello, world!
