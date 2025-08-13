@@ -1,0 +1,4 @@
+fastapi[standard]==0.116.1
+uvicorn==0.35.0
+pymongo[srv]==4.14.0
+async-lru==2.0.5

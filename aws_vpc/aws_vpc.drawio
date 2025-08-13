@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" version="28.1.0">
+  <diagram name="Page-1" id="YO6fI4UiuW-zHiKsXfEC">
+    <mxGraphModel dx="825" dy="959" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ppNzNEcFW-80UwDM_199-4" value="VPC" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="177" y="47" width="411" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="49" y="106" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-3" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="aBk0e4fkvTpgOlKFJHKp-1" target="faw6b0mYo4fymj4pTFK4-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="109" y="126" as="sourcePoint" />
+            <mxPoint x="130" y="127" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-4" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="312" y="125.5" as="sourcePoint" />
+            <mxPoint x="429.75" y="125.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-8" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Docker FastAPI MongoDB lab&lt;br&gt;&lt;/h1&gt;&lt;p&gt;1. Client connects to public IP address&lt;br&gt;&lt;/p&gt;&lt;p&gt;2. Public subnet EC2 instance connects to private subnet EC2 instance&lt;br&gt;&lt;/p&gt;&lt;p&gt;3. Exchange happens between API and MongoDB&lt;br&gt;&lt;/p&gt;&lt;p&gt;4. Answer is returned to client&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="615" y="79" width="341" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="faw6b0mYo4fymj4pTFK4-1" value="IGW" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.internet_gateway;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="160" y="104.5" width="44" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="faw6b0mYo4fymj4pTFK4-3" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="faw6b0mYo4fymj4pTFK4-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="299" as="sourcePoint" />
+            <mxPoint x="279" y="125.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ODNIWE-asfguKpytUvqN-3" value="NAT GW" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.vpc_nat_gateway;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="275" y="199" width="41" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="ODNIWE-asfguKpytUvqN-4" value="" style="endArrow=classic;dashed=1;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0;entryY=0.79;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=classic;startFill=1;endFill=1;" parent="1" source="ODNIWE-asfguKpytUvqN-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="318" y="410" as="sourcePoint" />
+            <mxPoint x="429.75" y="141.16000000000008" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ODNIWE-asfguKpytUvqN-5" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" parent="1" source="ODNIWE-asfguKpytUvqN-3" target="faw6b0mYo4fymj4pTFK4-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ppNzNEcFW-80UwDM_199-2" value="MongoDB" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="435" y="110" width="32.5" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="ppNzNEcFW-80UwDM_199-3" value="API" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="279.25" y="103.5" width="32.5" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="ppNzNEcFW-80UwDM_199-5" value="eu-west-1a (public subnet)" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_subnet;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="193" y="79" width="183" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="ppNzNEcFW-80UwDM_199-7" value="eu-west-1b (private subnet)" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_subnet;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="398" y="79" width="184" height="105" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
