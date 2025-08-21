@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" version="28.1.0">
+  <diagram name="Page-1" id="YO6fI4UiuW-zHiKsXfEC">
+    <mxGraphModel dx="1001" dy="1164" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KWM5hjO59ShQ5DEeZdgE-1" value="VPC" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="411" y="47" width="210" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="ppNzNEcFW-80UwDM_199-7" value="eu-central-1a (private subnet)" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_subnet;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="428" y="79" width="184" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="ppNzNEcFW-80UwDM_199-5" value="eu-west-1a (public subnet)" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_subnet;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="193" y="79" width="183" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="ppNzNEcFW-80UwDM_199-4" value="VPC" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="177" y="47" width="210" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="52" y="115" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-3" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="aBk0e4fkvTpgOlKFJHKp-1" target="faw6b0mYo4fymj4pTFK4-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="109" y="126" as="sourcePoint" />
+            <mxPoint x="130" y="127" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBk0e4fkvTpgOlKFJHKp-8" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;VPC Peer Connection lab&lt;br&gt;&lt;/h1&gt;&lt;p&gt;1. Client connects to public IP address&lt;br&gt;&lt;/p&gt;&lt;p&gt;2. Public subnet EC2 instance connects to public subnet EC2 instance&lt;br&gt;&lt;/p&gt;&lt;p&gt;3. Exchange happens between API and MongoDB over peer connection&lt;br&gt;&lt;/p&gt;&lt;p&gt;4. Answer is returned to client&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="648" y="75" width="341" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="faw6b0mYo4fymj4pTFK4-1" value="IGW" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.internet_gateway;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="166" y="114.5" width="44" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="faw6b0mYo4fymj4pTFK4-3" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="faw6b0mYo4fymj4pTFK4-1" target="ppNzNEcFW-80UwDM_199-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="299" as="sourcePoint" />
+            <mxPoint x="279" y="125.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ppNzNEcFW-80UwDM_199-2" value="MongoDB" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="493.25" y="113.5" width="32.5" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="ppNzNEcFW-80UwDM_199-3" value="API" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="260.25" y="113.5" width="32.5" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="KWM5hjO59ShQ5DEeZdgE-2" value="IGW" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.internet_gateway;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="395" y="115" width="44" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="KWM5hjO59ShQ5DEeZdgE-10" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ppNzNEcFW-80UwDM_199-3" target="gPesq1MtNVvYUET6qepk-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="168" y="375" as="sourcePoint" />
+            <mxPoint x="276.5" y="279" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="277" y="341" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gPesq1MtNVvYUET6qepk-2" value="Public subnet" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#7AA116;fillColor=#F2F6E8;verticalAlign=top;align=left;spacingLeft=30;fontColor=#248814;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="429" y="195" width="178" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="gPesq1MtNVvYUET6qepk-1" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.nat_gateway;" vertex="1" parent="gPesq1MtNVvYUET6qepk-2">
+          <mxGeometry x="57" y="26" width="52" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="gPesq1MtNVvYUET6qepk-3" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gPesq1MtNVvYUET6qepk-1" target="ppNzNEcFW-80UwDM_199-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="367" as="sourcePoint" />
+            <mxPoint x="590" y="317" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gPesq1MtNVvYUET6qepk-4" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gPesq1MtNVvYUET6qepk-1" target="KWM5hjO59ShQ5DEeZdgE-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="458" y="380" as="sourcePoint" />
+            <mxPoint x="508" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gPesq1MtNVvYUET6qepk-5" value="VPC Peering Connection" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.vpc_peering;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="305" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="gPesq1MtNVvYUET6qepk-6" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ppNzNEcFW-80UwDM_199-2" target="gPesq1MtNVvYUET6qepk-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="561" y="364" as="sourcePoint" />
+            <mxPoint x="611" y="314" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="580" y="135" />
+              <mxPoint x="580" y="341" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
